@@ -1,0 +1,18 @@
+{
+  "name": "constructive-chat",
+  "version": "1.0.0",
+  "description": "chat",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "tunnel": "ssh -R 80:localhost:3000 nokey@localhost.run"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "init": "^0.1.2",
+    "socket.io": "^4.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

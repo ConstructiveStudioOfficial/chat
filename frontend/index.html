@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>chat</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="shortcut icon" href="assets/icon.png" type="image/x-icon" />
+  </head>
+  <body>
+    <main>
+      <div class="modal modal--active" id="modal">
+        <h1 class="modal__title">chat</h1>
+        <input
+          class="modal__area"
+          type="text"
+          id="nickname"
+          placeholder="Введите никнейм..."
+          maxlength="20"
+          autofocus
+        />
+        <button class="modal__send" onclick="joinChat()">войти</button>
+      </div>
+      <div class="chat" id="chat">
+        <header>
+          <h1>chat</h1>
+          <span id="usernameDisplay"></span>
+        </header>
+        <div class="messages-container" id="messagesContainer"></div>
+        <div class="input-container">
+          <input
+            type="text"
+            id="messageInput"
+            placeholder="Введите сообщение..."
+            disabled
+          />
+          <button onclick="sendMessage()">➤</button>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
