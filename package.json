@@ -1,18 +1,23 @@
 {
-  "name": "constructive-chat",
-  "version": "1.0.0",
-  "description": "chat",
-  "main": "server.js",
+  "name": "messenger",
+  "private": true,
+  "version": "0.0.0",
+  "type": "commonjs",
   "scripts": {
-    "start": "node backend/server.js",
-    "tunnel": "ssh -R 80:localhost:3000 nokey@localhost.run"
-  },
-  "dependencies": {
-    "express": "^4.18.2",
-    "init": "^0.1.2",
-    "socket.io": "^4.7.2"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1"
+    "vite": "^8.0.0-beta.13"
+  },
+  "overrides": {
+    "vite": "^8.0.0-beta.13"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "init": "^0.1.2",
+    "socket.io": "^4.8.3"
   }
 }
